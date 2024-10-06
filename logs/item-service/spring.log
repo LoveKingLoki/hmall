@@ -2232,3 +2232,22 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: BIGINT UNSIGN
 01:12:22:944 DEBUG 14592 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? , ? )
 01:12:22:944 DEBUG 14592 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 2120808(Long), 35092182526(Long), 40630733216(Long)
 01:12:22:954 DEBUG 14592 --- [http-nio-8081-exec-3] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 3
+01:16:18:552  WARN 14592 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+01:16:18:553  WARN 14592 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+01:16:18:554  WARN 14592 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+01:16:18:555  WARN 14592 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+01:16:19:647  INFO 14592 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+01:16:19:662  INFO 14592 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+01:16:19:996  INFO 14592 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
+01:16:19:996  INFO 14592 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@2ee36b70[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+01:16:19:997  INFO 14592 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1727804532511_192.168.14.1_63197
+01:16:20:002  INFO 14592 --- [nacos-grpc-client-executor-158] c.a.n.c.remote.client.grpc.GrpcClient    : [1727804532511_192.168.14.1_63197]Ignore complete event,isRunning:false,isAbandon=false
+01:16:20:010  INFO 14592 --- [SpringContextShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@2a7c5a9d[Running, pool size = 5, active threads = 0, queued tasks = 0, completed tasks = 159]
+01:16:20:016  INFO 14592 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+01:16:20:077  INFO 14592 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+01:16:20:085  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : channel inactive: [id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]
+01:16:20:086  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.netty.NettyClientChannelManager  : return to pool, rm channel:[id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]
+01:16:20:086  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : channel valid false,channel:[id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]
+01:16:20:087  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.core.rpc.netty.NettyPoolableFactory  : will destroy channel:[id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]
+01:16:20:087  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]) will closed
+01:16:20:087  INFO 14592 --- [NettyClientSelector_RMROLE_1_1] i.s.c.r.n.AbstractNettyRemotingClient    : ChannelHandlerContext(AbstractNettyRemotingClient$ClientHandler#0, [id: 0x60f81146, L:/192.168.14.1:63187 ! R:/192.168.14.101:8099]) will closed
